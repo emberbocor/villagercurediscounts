@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${mod_version}",
+  "name": "${mod_name}",
+  "description": "Zombie villager cure discounts stack again up to a configurable number of cures, and can be shared with every player. Only needed on the server.",
+  "authors": [
+    "emberbocor"
+  ],
+  "contact": {
+    "homepage": "https://github.com/emberbocor/villagercurediscounts",
+    "sources": "https://github.com/emberbocor/villagercurediscounts",
+    "issues": "https://github.com/emberbocor/villagercurediscounts/issues"
+  },
+  "license": "${mod_license}",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.emberbocor.villagercurediscounts.VillagerCureDiscountsFabric"
+    ]
+  },
+  "mixins": [
+    "${mod_id}.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": "${fabric_loader_version_range}",
+    "fabric-api": "${fabric_api_version_range}",
+    "minecraft": "${fabric_minecraft_version_range}",
+    "java": ">=21"
+  }
+}
