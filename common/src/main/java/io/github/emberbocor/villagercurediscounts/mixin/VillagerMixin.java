@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import io.github.emberbocor.villagercurediscounts.cure.CureDiscounts;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.ai.village.ReputationEventType;
-import net.minecraft.world.entity.npc.Villager;
+import net.minecraft.world.entity.npc.villager.Villager;
 import net.minecraft.world.entity.player.Player;
 
 @Mixin(Villager.class)
