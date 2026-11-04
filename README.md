@@ -74,12 +74,13 @@ shareWithAllPlayers = true
 - Before 1.20.2 the strong cure gossip stopped growing after 5 cures and the weaker one after 8. With `maxCures = 5` both stop after 5 cures.
 - Cures made while `shareWithAllPlayers = false` only count for the player who cured. Turning sharing off hides the shared discount without deleting it; turning it on again brings it back.
 - Lowering `maxCures` does not lower a discount a villager already has. The next cure of that villager brings it down to the new limit.
+- With `maxCures = 1`, gossip between villagers follows the vanilla rules exactly. Stacked strong cure gossip left over from a higher setting can then be passed on to other villagers, as vanilla does with any gossip above its limit.
 - Changes take effect after a server restart, or after closing and reopening a singleplayer world.
 - Mistakes do not crash the server. An invalid value uses the default for that setting and is logged as a warning. If the file cannot be read at all (for example a TOML syntax error), all defaults are used, the file is left untouched and the log says why.
 
 ## Removing the mod
 
-The world opens normally. Villagers keep the cure gossip they have, so stacked discounts stay until the player who earned them cures that villager again; the next cure brings it back to the vanilla limit. The weaker part keeps fading day by day. Without the mod, vanilla gossip between villagers can also pass part of a stacked discount on to other villagers. Shared discounts stop working: they are stored under a fixed placeholder ID that belongs to no player, so vanilla ignores them. The config file stays in `config/` until you delete it.
+The world opens normally. Villagers keep the cure gossip they have, so stacked discounts stay until the player who earned them cures that villager again; the next cure brings it back to the vanilla limit. The weaker part keeps fading day by day. Without the mod, vanilla gossip between villagers can also pass part of a stacked discount on to other villagers. Shared discounts stop working: they are stored under a fixed placeholder ID that belongs to no player, so vanilla ignores them. Vanilla gossip can still pass them on to other villagers while the mod is removed; if you install the mod again, those villagers give that shared discount too. The config file stays in `config/` until you delete it.
 
 ## Compatibility
 
